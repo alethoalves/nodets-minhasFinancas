@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Minhas Finanças</title>
+</head>
+<body>
+    <div class="models">
+        <div class="btn-menu" >
+            YYYY <span>nomeMes</span>
+        </div>
+        <!---->
+        <div class="btn-item" >
+            <div class="icon"><i class="fa-solid"></i></div>
+            <div class="item">
+                <div class="item-name">Nome do item</div>
+                <div class="item-value">R$ N,NN</div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">Minhas Finanças</div>
+        </div>
+    </header>
+    <div class="container body">
+        <div class="left-menu">
+            <a class="btn-add">Novo mês</a>
+            <div class="display-nav">
+                <nav>
+                    
+                </nav>
+            </div>
+            <a class="btn-add btn-add-viewMore" onclick="viewMore()"><i class="fa-solid fa-caret-down"></i></a>
+        </div>
+        <main>
+            <div class="title">
+                
+            </div>
+            <div class="total">
+                <span class="total-increase"></span><br>
+                <span class="total-decrease"></span><br>
+                <span class="balance"></span>
+            </div>
+            <div class="items">
+                Entradas
+                <div id="itemIncrease">
+
+                </div>
+                <a  class="btn-add add-increase"  >Nova entrada</a>
+            </div>
+            <div class="items">
+                Saídas
+                <div id="itemDecrease">
+                    
+                </div>
+                <a class="btn-add add-decrease">Nova saída</a>
+            </div>
+            
+        </main>
+    </div>
+    <aside>
+        <div class="form-header">
+            <div class="title">Entrada</div>
+            <div class="close" onclick="closeAside()">
+                <i class="fa-solid fa-xmark "></i>
+            </div>
+        </div>
+        <form action="" method="post">
+            <label >Ano:<br>
+                <input disabled type="number" name="year-item" value=""/>
+            </label >
+            <label >Mês:<br>
+                <input disabled type="number" name="month-item" value=""/>
+            </label>
+            <label >Item id:<br>
+                <input disabled type="number" name="id-item" value=""/>
+            </label>
+            <label>Nome do item:<br>
+                <input type="text" name="name-item" value="" placeholder="Digite o nome do item"/>
+            </label>
+            <label>Valor:<br>
+                <div class="input-with-icon">
+                    <div class="input-icon">R$</div>
+                    <input type="number" name="value-item" value="" placeholder="Digite o valor em R$"/>    
+                </div>
+            </label>
+            <label >Tipo de item:<br>
+                <select disabled name="item-type" id="item-type">
+                    <option value="0">Despesa</option>
+                    <option value="1">Receita</option>
+                </select>
+            </label>
+            <label> <div class="label-name-status"></div>
+                <select name="item-status" id="item-status">
+                    <option value="0">Sim</option>
+                    <option selected value="1">Não</option>
+                </select>
+            </label>
+            <div class="icones">
+                <label for="">Digite o nome do ícone:</label>
+                <div class="input-with-icon">
+                    <div class="input-icon"></div>
+                    <input type="text" name="name-icon" value="" placeholder="Digite o nome do ícone"/>   
+                </div>
+
+            </div>
+        </form>
+        <a class="btn btn-primary" href="">Salvar</a>
+        <a class="btn btn-warning" href="">Excluir</a>
+    </aside>
+    <script type="text/javascript" src="bd.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
